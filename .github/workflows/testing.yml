@@ -48,6 +48,10 @@ jobs:
           pip install --constraint=.github/workflows/constraints.txt poetry
           poetry --version
 
+      - name: Install Depedencies
+        run: |
+            poetry install
+
       - name: Run Pytest
         run: |
             pip install pytest pytest-cov
